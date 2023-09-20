@@ -11,6 +11,10 @@ namespace MenuSystem
         public string Title;
         private MenuItem[] menuItems;
         private int itemCount = 0;
+        public Menu()
+        {
+            menuItems = new MenuItem[10];
+        }
         public void Show()
         {
             Console.WriteLine(Title + "\n");
@@ -19,13 +23,12 @@ namespace MenuSystem
                 Console.WriteLine(menuItems[i].Title);
             Console.WriteLine("\n" + "(Tryk menupunkt eller 0 for at afslutte) ");
         }
-        public void AddmenuTitle(string menuTitle)
+        public void AddmenuItem(string menuTitle)
         {
             MenuItem mi = new MenuItem();
             mi.Title = menuTitle;
             menuItems[itemCount] = mi;
             itemCount++;
-            Console.WriteLine(mi.Title[0]);
         }
     }
 }
