@@ -21,7 +21,7 @@ namespace Persistens
         }
         public void SavePerson(Person person)
         {
-        StreamWriter SW = new StreamWriter(dataFileName);
+            StreamWriter SW = new StreamWriter(dataFileName);
             SW.WriteLine(person.MakeTitle());
             SW.Close();
         }
@@ -31,19 +31,25 @@ namespace Persistens
             string lines = SR.ReadLine();
             string[] pArray = lines.Split(';');
 
-            Person newPerson = new Person(pArray[0], Convert.ToDateTime(pArray[1]),Convert.ToDouble(pArray[2]), Convert.ToBoolean(pArray[3]), Convert.ToInt32(pArray[4]));
+            Person newPerson = new Person(pArray[0], Convert.ToDateTime(pArray[1]), Convert.ToDouble(pArray[2]), Convert.ToBoolean(pArray[3]), Convert.ToInt32(pArray[4]));
             SR.Close();
             return newPerson;
 
         }
-        
-        public void SavePersons(Person[] person)
-        {
 
+        public void SavePersons(Person[] persons)
+        {
+            StreamWriter SW = new StreamWriter(dataFileName);
+            for (int i = 0; i < persons.Length; i++)
+            {
+                SW.WriteLine(persons[i].MakeTitle());
+            }
+            SW.Close();
         }
         public Person[] LoadPersons()
         {
             return new Person[0];
         }
+        
     }
 }
