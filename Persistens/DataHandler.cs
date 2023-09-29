@@ -36,5 +36,14 @@ namespace Persistens
             return newPerson;
 
         }
+        
+        public void SavePersons(Person[] person)
+        {
+
+        }
+        public Person[] LoadPersons()
+        {
+            return new Person[0];
+        }
     }
 }
