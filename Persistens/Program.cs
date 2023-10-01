@@ -17,7 +17,11 @@
 
             Console.Write("Writing Person: ");
             Console.WriteLine(person.MakeTitle());
-            Console.WriteLine(persons[0].MakeTitle());
+            for (int i = 0; i < persons.Length; i++)
+            {
+                Console.WriteLine(persons[i].MakeTitle());
+            }
+            //Console.WriteLine(persons[0].MakeTitle());
             Console.ReadKey();
 
 
