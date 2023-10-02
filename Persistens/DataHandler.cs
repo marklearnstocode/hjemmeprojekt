@@ -48,7 +48,10 @@ namespace Persistens
         }
         public Person[] LoadPersons()
         {
-            return new Person[0];
+            StreamReader SR = new StreamReader(dataFileName);
+            string lines = SR.ReadLine();
+
+            return persons[0];
         }
         
     }
