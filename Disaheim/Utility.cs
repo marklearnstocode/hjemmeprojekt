@@ -8,13 +8,27 @@ namespace Disaheim
 {
     public class Utility
     {
-        public double GetValueOfBook(book : Book)
+        public double GetValueOfBook(Book book)
         {
-
+            return book.Price;
         }
-        public double GetValueOfAmulet(amulet : Amulet)
+        public double GetValueOfAmulet(Amulet amulet)
         {
-
+            switch (amulet.Quality)
+            {
+                case Level.low:
+                    return 12.5;
+                    break;
+                case Level.medium:
+                    return 20.0;
+                    break;
+                case Level.high:
+                    return 27.5;
+                    break;
+                default:
+                    return 0;
+                    break;
+            }
         }
     }
 }
