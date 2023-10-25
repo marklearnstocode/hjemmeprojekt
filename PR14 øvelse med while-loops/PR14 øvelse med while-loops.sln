@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PR14 øvelse med while-loops", "PR14 øvelse med while-loops.csproj", "{B76D05A7-7787-44E3-93AC-A86B97F7893C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntArrayHelperTest", "..\IntArrayHelperTest\IntArrayHelperTest.csproj", "{54FFDA8E-F79A-4B5C-98D7-84F751C09DBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B76D05A7-7787-44E3-93AC-A86B97F7893C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76D05A7-7787-44E3-93AC-A86B97F7893C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76D05A7-7787-44E3-93AC-A86B97F7893C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76D05A7-7787-44E3-93AC-A86B97F7893C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54FFDA8E-F79A-4B5C-98D7-84F751C09DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54FFDA8E-F79A-4B5C-98D7-84F751C09DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54FFDA8E-F79A-4B5C-98D7-84F751C09DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54FFDA8E-F79A-4B5C-98D7-84F751C09DBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1AE3CA4-8943-4369-801A-AF9D7C301C2D}
+	EndGlobalSection
+EndGlobal
