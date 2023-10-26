@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    internal class Merchandise
+    public abstract class Merchandise
     {
-    }
+		private string itemID;
+
+		public string ItemID
+		{
+			get { return itemID; }
+			set { itemID = value; }
+		}
+		public override string ToString()
+		{
+			return $"ItemId: {ItemID}";
+		}
+
+	}
 }

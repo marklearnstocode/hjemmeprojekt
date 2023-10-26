@@ -6,15 +6,8 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class Book
+    public class Book : Merchandise
     {
-		private string itemID;
-
-		public string ItemID
-		{
-			get { return itemID; }
-			set { itemID = value; }
-		}
 		private string title;
 
 		public string Title
@@ -31,7 +24,7 @@ namespace Disaheim
 		}
 		public Book(string itemID, string title, double price)
 		{
-			this.itemID = itemID;
+			ItemID = itemID;
 			this.title = title;
 			this.price = price;
 		}
@@ -45,7 +38,7 @@ namespace Disaheim
 		}
         public override string ToString()
         {
-            return "ItemId: " + itemID + ", Title: " + title + ", Price: " + price;
+            return "ItemId: " + ItemID + ", Title: " + title + ", Price: " + price;
         }
 
     }

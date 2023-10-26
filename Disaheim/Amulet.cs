@@ -6,15 +6,9 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class Amulet
+    public class Amulet : Merchandise
     {
-		private string itemID;
-
-		public string ItemID
-		{
-			get { return itemID; }
-			set { itemID = value; }
-		}
+		
 		private string design;
 
 		public string Design
@@ -31,7 +25,7 @@ namespace Disaheim
 		}
 		public Amulet (string itemID, Level quality, string design)
 		{
-			this.itemID = itemID;
+			ItemID = itemID;
 			this.quality = quality;
 			this.design = design;
 		}
@@ -45,7 +39,7 @@ namespace Disaheim
 		}
         public override string ToString()
         {
-			return "ItemId: " + itemID + ", Quality: " + quality + ", Design: " + design;
+			return "ItemId: " + ItemID + ", Quality: " + quality + ", Design: " + design;
         }
 
     }
