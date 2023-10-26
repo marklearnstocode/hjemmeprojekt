@@ -3,14 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disaheim", "Disaheim.csproj", "{D7853A3F-7A4A-47AC-88D6-1FA887138C5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Disaheim", "Disaheim.csproj", "{D7853A3F-7A4A-47AC-88D6-1FA887138C5A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6EED227D-9805-425F-83EF-6AF97F50AC45}"
 	ProjectSection(SolutionItems) = preProject
 		Level-enumeration = Level-enumeration
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisaheimTest", "..\DisaheimTest\DisaheimTest.csproj", "{EE7BF83C-A410-4173-93FD-485C54385FE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisaheimTest", "..\DisaheimTest\DisaheimTest.csproj", "{EE7BF83C-A410-4173-93FD-485C54385FE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityLib", "..\UtilityLib\UtilityLib.csproj", "{17A7357A-97E4-457E-822F-1E6DB2142828}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{EE7BF83C-A410-4173-93FD-485C54385FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE7BF83C-A410-4173-93FD-485C54385FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE7BF83C-A410-4173-93FD-485C54385FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17A7357A-97E4-457E-822F-1E6DB2142828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A7357A-97E4-457E-822F-1E6DB2142828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A7357A-97E4-457E-822F-1E6DB2142828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A7357A-97E4-457E-822F-1E6DB2142828}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
