@@ -9,47 +9,35 @@ namespace Disaheim
 {
     public class AmuletRepository
     {
-        private List<Amulet> amulets = new List<Amulet>();
-        public void AddAmulet(Amulet amulet)
-        {
-            amulets.Add(amulet);
-        }
-        public Amulet GetAmulet(string itemID)
-        {
-            Amulet amulet = null;
-            foreach (Amulet a in amulets)
-            {
-                if (a.ItemID == itemID)
-                {
-                    amulet = a;
-                    break;
-                }
+        //private List<Amulet> amulets = new List<Amulet>();
+        //public void AddAmulet(Amulet amulet)
+        //{
+        //    amulets.Add(amulet);
+        //}
+        //public Amulet GetAmulet(string itemID)
+        //{
+        //    Amulet amulet = null;
+        //    foreach (Amulet a in amulets)
+        //    {
+        //        if (a.ItemID == itemID)
+        //        {
+        //            amulet = a;
+        //            break;
+        //        }
 
-            }
-            return amulet;
-        }
-        public double GetTotalValue()
-        {
-            double total = 0;
-            foreach (Amulet a in amulets)
-            {
-                switch (a.Quality)
-                {
-                    case Level.low:
-                        total += 12.5;
-                        break;
-                    case Level.medium:
-                       total += 20.0;
-                        break;
-                    case Level.high:
-                        total += 27.5;
-                        break;
-                    default:
-                        total += 0;
-                        break;
-                }
-        }
-            return total;
+        //    }
+        //    return amulet;
+        //}
+        //public double GetTotalValue()
+        //{
+        //    double total = 0;
+        //    Utility utility = new Utility();
+        //    foreach (Amulet a in amulets)
+        //    {
+        //        total += utility.GetValueOfAmulet(a);
+        //    }
+        //    return total;
+        //}
     }
-    }
+    
 }
