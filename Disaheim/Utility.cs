@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,31 +51,53 @@ namespace Disaheim
         }
         public double GetValueOfMerchandise(Merchandise merchandise)
         {
-            switch (merchandise)
+            if (merchandise is Book book)
             {
-                case Book book:
-                    return book.Price;
-                    break;
-                case Amulet amulet:
-                    switch (amulet.Quality)
-                    {
-                        case Level.low:
-                            return LowQualityValue;
-                            break;
-                        case Level.medium:
-                            return MediumQualityValue;
-                            break;
-                        case Level.high:
-                            return HighQualityValue;
-                            break;
-                        default:
-                            return 0;
-                            break;
-                    }
-                default:
-                    return 0;
+                return book.Price;
             }
+            else if (merchandise is Amulet amulet)
+            {
+                switch (amulet.Quality)
+                {
+                    case Level.low:
+                        return LowQualityValue;
+                        break;
+                    case Level.medium:
+                        return MediumQualityValue;
+                        break;
+                    case Level.high:
+                        return HighQualityValue;
+                        break;
+                    default:
+                        return 0;
+                        break;
+                }
 
+                //switch (merchandise)
+                //{
+                //    case Book book:
+                //        return book.Price;
+                //        break;
+                //    case Amulet amulet:
+                //        switch (amulet.Quality)
+                //        {
+                //            case Level.low:
+                //                return LowQualityValue;
+                //                break;
+                //            case Level.medium:
+                //                return MediumQualityValue;
+                //                break;
+                //            case Level.high:
+                //                return HighQualityValue;
+                //                break;
+                //            default:
+                //                return 0;
+                //                break;
+                //        }
+                //    default:
+                //        return 0;
+            }
+            else { return 0; }
         }
     }
 }
