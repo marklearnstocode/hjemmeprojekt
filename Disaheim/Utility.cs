@@ -51,27 +51,27 @@ namespace Disaheim
     //}
     //public double GetValueOfMerchandise(Merchandise merchandise)
     //{
-    //    if (merchandise is Book book)
-    //    {
-    //        return book.Price;
-    //    }
-    //    else if (merchandise is Amulet amulet)
-    //    {
-    //        switch (amulet.Quality)
-    //        {
-    //            case Level.low:
-    //                return LowQualityValue;
-    //                break;
-    //            case Level.medium:
-    //                return MediumQualityValue;
-    //                break;
-    //            case Level.high:
-    //                return HighQualityValue;
-    //                break;
-    //            default:
-    //                return 0;
-    //                break;
-    //        }
+        //if (merchandise is Book book)
+        //{
+        //    return book.Price;
+        //}
+        //else if (merchandise is Amulet amulet)
+        //{
+        //    switch (amulet.Quality)
+        //    {
+        //        case Level.low:
+        //            return LowQualityValue;
+        //            break;
+        //        case Level.medium:
+        //            return MediumQualityValue;
+        //            break;
+        //        case Level.high:
+        //            return HighQualityValue;
+        //            break;
+        //        default:
+        //            return 0;
+        //            break;
+        //    }
 
     //        //switch (merchandise)
     //        //{
