@@ -14,36 +14,61 @@ namespace Disaheim
         {
 
         }
-        public IValuable GetValuable(string iD)
+        public IValuable? GetValuable(string iD)
         {
             IValuable valuable = null;
             foreach (IValuable valuable1 in _valuables)
             {
-                switch (valuable1)
+                if (valuable1 is Book)
                 {
-                    case (Book):
-                        if (iD == ((Book)valuable1).ItemID)
-                            return valuable1;
-                        break;
-                    case (Amulet):
-                        if (iD == ((Amulet)valuable1).ItemID)
-                            return valuable1;
-                        break;
-                    case (Course):
-                        if (iD== ((Course)valuable1).Name)
-                            return valuable1;
-                        break;
+                    if (iD == ((Book)valuable1).ItemID)
+                    {
+                    return valuable1;
+                    }
                 }
+                else if (valuable1 is Amulet)
+                {
+                    if (iD == ((Amulet)valuable1).ItemID)
+                    {
+                        return valuable1;
+                    }
+                }
+                else if (valuable1 is Course)
+                {
+                    if (iD == ((Amulet)valuable1).ItemID)
+                    {
+                        return valuable1;
+                    }
+                }
+
             }
             return valuable;
+
         }
         public double GetTotalValue()
         {
+            double totalValue = 0;
+            foreach (IValuable valuable1 in _valuables)
+            {
+                if (valuable1 is Book)
+                {
+                    totalValue += ((Book)valuable1).GetValue();
+                }
+                else if (valuable1 is Amulet)
+                {
+                    totalValue += ((Amulet)valuable1).GetValue();
+                }
+                else if (valuable1 is Course)
+                {
+                    totalValue += ((Course)valuable1).GetValue();
 
+                }
+            }
+            return totalValue;
         }
         public int Count()
         {
-
+            return _valuables.Count;
         }
     }
 }
