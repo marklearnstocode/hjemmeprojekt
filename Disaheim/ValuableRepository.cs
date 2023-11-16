@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class ValuableRepository
+    public class ValuableRepository : IPersistable
     {
         private List<IValuable> _valuables = new List<IValuable>();
 
         public void AddValuable(IValuable valuable)
         {
-
+            _valuables.Add(valuable);
         }
         public IValuable? GetValuable(string iD)
         {
@@ -35,7 +35,7 @@ namespace Disaheim
                 }
                 else if (valuable1 is Course)
                 {
-                    if (iD == ((Amulet)valuable1).ItemID)
+                    if (iD == ((Course)valuable1).Name)
                     {
                         return valuable1;
                     }
@@ -69,6 +69,34 @@ namespace Disaheim
         public int Count()
         {
             return _valuables.Count;
+        }
+
+        void IPersistable.Save()
+        {
+            StreamWriter SW = new StreamWriter("ValuableRepository.txt");
+            IValuable valuable = null;
+            foreach (IValuable valuable1 in _valuables)
+            {
+            SW.WriteLine(valuable1);
+
+            }
+                SW.Close();
+            throw new NotImplementedException();
+        }
+
+        public void Save(string fileName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Load()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Load(string fileName)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,0 +1,46 @@
+﻿<Window x:Class="TusindfrydWPF.CreateFlowerSortDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TusindfrydWPF"
+        mc:Ignorable="d"
+        Title="CreateFlowerSortDialog" Height="400" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width ="4*"/>
+            <ColumnDefinition Width = "10*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Navn:" Grid.Column="0" Grid.Row="0"/>
+        <TextBox x:Name="tbName" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+        <Label Content="Billede (sti): " Grid.Column="0" Grid.Row="1"/>
+        <TextBox x:Name="tbBilledeSti" VerticalAlignment="center" Grid.Column="1" Grid.Row="1" LostFocus="tbBilledeSti_LostFocus"/>
+        <Image x:Name="imgBillede"  Grid.Column="1" Grid.Row="2"/>
+        <Label Content="Produktionsid:" Grid.Column="0" Grid.Row="3"/>
+        <TextBox x:Name="tbProduktionsId" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3"/>
+        <Label Content="Halveringstid:" Grid.Column="0" Grid.Row="4"/>
+        <TextBox x:Name="tbHalveringstid" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4"/>
+        <Label Content="Størrelse:" Grid.Column="0" Grid.Row="5"/>
+        <TextBox x:Name="tbStørrelse" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5"/>
+        <Image Grid.Column="1" Grid.Row="6"/>
+        <Grid Grid.Row="6" Grid.Column ="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+        <Button Content="Fortryd" Grid.Column="2" Grid.Row="6" Width="67"/>
+        <Button x:Name="btnOK" Content="OK" Grid.Column="1" Grid.Row="6" Width="67" Click="btnOK_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>

@@ -7,7 +7,7 @@
             Controller controller = new Controller();
             
             controller.AddToList("Rose", 30, 25, 7);
-            Console.WriteLine("Hello, World!");
+            
         }
     }
 }

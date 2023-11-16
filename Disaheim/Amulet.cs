@@ -23,26 +23,26 @@ namespace Disaheim
             get { return quality; }
             set { quality = value; }
         }
-        private static double lowQualityValue;
+        private static double lowQualityValue = 12.5;
 
         public static double LowQualityValue
         {
             get { return lowQualityValue; }
-            set { lowQualityValue = 12.5; }
+            set { lowQualityValue = value; }
         }
-        private static double mediumQualityValue;
+        private static double mediumQualityValue = 20.0;
 
         public static double MediumQualityValue
         {
             get { return mediumQualityValue; }
-            set { mediumQualityValue = 20.0; }
+            set { mediumQualityValue = value; }
         }
-        private static double highQualityValue;
+        private static double highQualityValue = 27.5;
 
         public static double HighQualityValue
         {
             get { return highQualityValue; }
-            set { highQualityValue = 27.5; }
+            set { highQualityValue = value; }
         }
 
         public Amulet(string itemID, Level quality, string design)
@@ -78,7 +78,6 @@ namespace Disaheim
                     break;
                 default:
                     return 0;
-                    break;
             }
         }
 
