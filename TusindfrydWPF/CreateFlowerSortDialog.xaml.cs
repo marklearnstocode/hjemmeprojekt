@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,40 +20,78 @@ namespace TusindfrydWPF
     /// </summary>
     public partial class CreateFlowerSortDialog : Window
     {
-            FlowerSort newFlower = new FlowerSort();
+        public FlowerSort newFlower;
         public CreateFlowerSortDialog()
         {
             InitializeComponent();
             ButtonRdy();
+            newFlower = new FlowerSort();
         }
 
-        private void tbName_TextChanged(object sender, TextChangedEventArgs e)
+        private void tb_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+            ButtonRdy();
         }
         private void ButtonRdy()
         {
-        if (tbName.Text != "" &&
-            tbBilledeSti.Text != "" &&
-            tbHalveringstid.Text != "" &&
-            tbProduktionsId.Text != "" &&
-            tbStørrelse.Text != "")
-            
+            if (tbName.Text != "" &&
+                tbBilledeSti.Text != "" &&
+                tbHalveringstid.Text != "" &&
+                tbProduktionsId.Text != "" &&
+                tbStørrelse.Text != "")
+
             {
                 btnOK.IsEnabled = true;
             }
-        else { btnOK.IsEnabled = false; }
+            else { btnOK.IsEnabled = false; }
         }
 
         private void btnOK_Click(object sender, RoutedEventArgs e)
         {
+            DialogResult = true;
 
         }
 
         private void tbBilledeSti_LostFocus(object sender, RoutedEventArgs e)
         {
-            imgBillede.Source = new BitmapImage(new Uri(tbBilledeSti.Text));
-            newFlower.PicturePath = tbBilledeSti.Text;
+            try
+            {
+                imgBillede.Source = new BitmapImage(new Uri(tbBilledeSti.Text));
+                newFlower.PicturePath = tbBilledeSti.Text;
+            }
+
+            catch (UriFormatException ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            ButtonRdy();
         }
+            private void tbName_LostFocus(object sender, RoutedEventArgs e)
+            {
+                newFlower.Name = tbName.Text;
+                if (tbName.Text != "")
+                {
+                    newFlower.Name = (tbName.Text);
+                }
+                else MessageBox.Show("Skriv en eksisterende blomstersort");
+                ButtonRdy();
+            }
+
+            private void tbProduktionsId_LostFocus(object sender, RoutedEventArgs e)
+            {
+                newFlower.ProductionTime = int.Parse(tbProduktionsId.Text);
+            }
+
+            private void tbHalveringstid_LostFocus(object sender, RoutedEventArgs e)
+            {
+                newFlower.HalfLifeTime = int.Parse(tbHalveringstid.Text);
+            }
+
+            private void tbStørrelse_LostFocus(object sender, RoutedEventArgs e)
+            {
+                newFlower.Size = int.Parse(tbStørrelse.Text);
+            }
     }
-}
+
+    }

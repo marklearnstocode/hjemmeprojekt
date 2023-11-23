@@ -50,7 +50,16 @@ namespace TusindfrydWPF
 			get { return myVar; }
 			set { myVar = value; }
 		}
+		//public FlowerSort(string name, string picturePath, int productionTime, int halfLifeTime, int size)
+		//{
+		//	this.name = name;
+		//	this.picturePath = picturePath;
+		//	this.productionTime = productionTime;
+		//	this.halfLifeTime = halfLifeTime;
+		//	this.size = size;
 
+		//}
+		
 
 	}
 }

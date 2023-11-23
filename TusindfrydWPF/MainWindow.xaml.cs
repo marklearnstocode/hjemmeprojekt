@@ -20,15 +20,25 @@ namespace TusindfrydWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<FlowerSort> flowerSorts;
+        List<FlowerSort> flowerSorts = new List<FlowerSort>();
         public MainWindow()
         {
             InitializeComponent();
-            flowerSorts = new List<FlowerSort>();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            CreateFlowerSortDialog flowers = new CreateFlowerSortDialog();
+            if (flowers.ShowDialog() == true)
+            {
+                flowerSorts.Add(flowers.newFlower);
+            }
+            tbBox1.Text = "";
+            foreach (FlowerSort newFlower in flowerSorts)
+            {
+                tbBox1.Text += newFlower.Name + "\n";
+            }
 
         }
     }

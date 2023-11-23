@@ -21,16 +21,16 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Label Content="Navn:" Grid.Column="0" Grid.Row="0"/>
-        <TextBox x:Name="tbName" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+        <TextBox x:Name="tbName" TextChanged="tb_TextChanged" VerticalAlignment="Center" LostFocus="tbName_LostFocus" Grid.Column="1" Grid.Row="0"/>
         <Label Content="Billede (sti): " Grid.Column="0" Grid.Row="1"/>
         <TextBox x:Name="tbBilledeSti" VerticalAlignment="center" Grid.Column="1" Grid.Row="1" LostFocus="tbBilledeSti_LostFocus"/>
         <Image x:Name="imgBillede"  Grid.Column="1" Grid.Row="2"/>
         <Label Content="Produktionsid:" Grid.Column="0" Grid.Row="3"/>
-        <TextBox x:Name="tbProduktionsId" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3"/>
+        <TextBox x:Name="tbProduktionsId" TextChanged="tb_TextChanged" LostFocus="tbProduktionsId_LostFocus" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3"/>
         <Label Content="Halveringstid:" Grid.Column="0" Grid.Row="4"/>
-        <TextBox x:Name="tbHalveringstid" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4"/>
+        <TextBox x:Name="tbHalveringstid" TextChanged="tb_TextChanged" LostFocus="tbHalveringstid_LostFocus" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4"/>
         <Label Content="Størrelse:" Grid.Column="0" Grid.Row="5"/>
-        <TextBox x:Name="tbStørrelse" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5"/>
+        <TextBox x:Name="tbStørrelse" TextChanged="tb_TextChanged" LostFocus="tbStørrelse_LostFocus" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5"/>
         <Image Grid.Column="1" Grid.Row="6"/>
         <Grid Grid.Row="6" Grid.Column ="1">
             <Grid.ColumnDefinitions>
@@ -39,7 +39,7 @@
                 <ColumnDefinition Width="6*"/>
             </Grid.ColumnDefinitions>
         <Button Content="Fortryd" Grid.Column="2" Grid.Row="6" Width="67"/>
-        <Button x:Name="btnOK" Content="OK" Grid.Column="1" Grid.Row="6" Width="67" Click="btnOK_Click"/>
+        <Button x:Name="btnOK" Content="OK" Grid.Column="1" Grid.Row="6" Width="67" Click="btnOK_Click" IsDefault="True"/>
         </Grid>
 
     </Grid>
