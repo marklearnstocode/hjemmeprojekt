@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Windows.Input;
+using WPFAndMVVM2.Commands;
 using WPFAndMVVM2.Models;
 
 namespace WPFAndMVVM2.ViewModels
@@ -46,6 +48,8 @@ namespace WPFAndMVVM2.ViewModels
             selectedPerson.DeletePerson(personRepo);
             PersonsVM.Remove(SelectedPerson);
         }
+        public ICommand NewPersonCommand { get; } = new NewPersonCommand();
+        public ICommand DeletePerson { get; } = new DeletePerson();
 
         public event PropertyChangedEventHandler PropertyChanged;
 

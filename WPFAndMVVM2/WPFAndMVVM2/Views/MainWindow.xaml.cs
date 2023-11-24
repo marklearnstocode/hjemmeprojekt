@@ -29,15 +29,15 @@ namespace WPFAndMVVM2
 
         }
 
-        private void btnNewPerson_Click(object sender, RoutedEventArgs e)
-        {
-            mvm.AddDefaultPerson();
-            lsBox.ScrollIntoView(mvm.SelectedPerson);
-        }
+        //private void btnNewPerson_Click(object sender, RoutedEventArgs e)
+        //{
+        //    mvm.AddDefaultPerson();
+        //    lsBox.ScrollIntoView(mvm.SelectedPerson);
+        //}
 
-        private void btnDeletePerson_Click(object sender, RoutedEventArgs e)
-        {
-            mvm.DeleteSelectedPerson();
-        }
+        //private void btnDeletePerson_Click(object sender, RoutedEventArgs e)
+        //{
+        //    mvm.DeleteSelectedPerson();
+        //}
     }
 }

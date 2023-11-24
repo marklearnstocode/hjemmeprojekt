@@ -30,9 +30,15 @@
             </ListBox>
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 <Label Content="  "/>
-                <Button x:Name="btnNewPerson" Content="New" Height="24" Width="78" Click="btnNewPerson_Click"/>
+                <Button x:Name="btnNewPerson" Content="New"
+                        Command="{Binding Path=NewPersonCommand}"
+                        CommandParameter="{Binding}" Height="24" Width="78"/>
+                <!--Click="btnNewPerson_Click"-->
                 <Label Content="                "/>
-                <Button x:Name="btnDeletePerson" Content="Delete" Height="24" Width="72" Click="btnDeletePerson_Click"/>
+                <Button x:Name="btnDeletePerson" Content="Delete"
+                        Height="24" Width="72" Command="{Binding Path=DeletePerson}"
+                        CommandParameter="{Binding}"/>
+                <!--Click="btnDeletePerson_Click"-->
             </StackPanel>
         </Grid>
 
