@@ -30,7 +30,8 @@ namespace PR31___ObserverPattern
 
         public override void Update()
         {
-            name = subject.Name;
+            message = subject.Message;
+			Console.WriteLine(Name + " " + Message + " fra " + subject.Name);
         }
     }
 }

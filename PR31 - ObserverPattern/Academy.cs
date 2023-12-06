@@ -8,14 +8,14 @@ namespace PR31___ObserverPattern
 {
     public class Academy : Subject
     {
-        private string message = "Så er der julefrokost venner!";
+        private string message;
 
         public string Message
         {
             get { return message; }
-            set { message = value; }
+            set { message = value; Notify(); }
         }
-        private string name = "Fra akademiet UCL";
+        private string name = "UCL";
 
         public string Name
         {
