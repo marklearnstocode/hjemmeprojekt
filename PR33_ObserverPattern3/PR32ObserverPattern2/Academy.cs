@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PR33ObserverPattern3;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 namespace PR32ObserverPattern2
 {
     public delegate void Notifyhandler();
-    public class Academy : Organization
+    public class Academy : Organization, INotifyMessageChanged
     {
         #region Field
         public Notifyhandler MessageChanged;
