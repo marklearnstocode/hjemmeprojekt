@@ -1,6 +1,7 @@
 ﻿using PR33ObserverPattern3;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PR32ObserverPattern2
 {
-    public class Academy : Organization, INotifyMessageChanged
+    public class Academy : Organization, INotifyPropertyChanged
     {
         #region Field
         //public Notifyhandler MessageChanged;
@@ -48,9 +49,8 @@ namespace PR32ObserverPattern2
 
         public void OnMessageChanged()
         {
-            MessageChanged(this, null);
+            PropertyChanged(this, null);
         }
-
-        public event INotifyMessageChanged.EventHandler MessageChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
     }
 }

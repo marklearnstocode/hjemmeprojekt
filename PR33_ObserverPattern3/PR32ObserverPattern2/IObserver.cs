@@ -9,6 +9,6 @@ namespace PR32ObserverPattern2
 {
     public interface IObserver
     {
-        public void Update();
+        public void Update(object sender, EventArgs e);
     }
 }

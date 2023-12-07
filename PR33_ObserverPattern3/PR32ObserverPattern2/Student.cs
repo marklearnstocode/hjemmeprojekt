@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,20 +9,30 @@ namespace PR32ObserverPattern2
 {
     public class Student : Person, IObserver
     {
-        private Academy academy {get;set;}
+        private string message;
 
-        public string Message { get; set; }
+        public event PropertyChangedEventHandler? PropertyChanged;
 
-        public Student(Academy academy, string name) : base(name)
+        public string Message
         {
-            this.academy = academy;
-
+            get { return message; }
+            set { message = value; }
         }
 
-        public void Update()
+
+        public Student(string name) : base(name)
         {
-            Message = academy.Message;
-            Console.WriteLine($"Studerende {Name} modtog nyheden '{Message}' fra {academy.Name}");
+
+        }
+        public void Update(object sender, EventArgs e)
+        {
+            if (sender is Academy a)
+            {
+                Message = a.Message;
+            Console.WriteLine($"Studerende {Name} modtog nyheden '{Message}' fra {a.Name}");
+            }
+            //Message = academy.Message;
+           
         }
     }
 }
