@@ -1,22 +1,23 @@
 ﻿using PR33ObserverPattern3;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PR32ObserverPattern2
 {
-    public delegate void Notifyhandler();
     public class Academy : Organization, INotifyMessageChanged
     {
         #region Field
-        public Notifyhandler MessageChanged;
+        //public Notifyhandler MessageChanged;
         //private List<NotifyHandler> observers = new List<NotifyHandler>();
         #endregion
 
         #region Property
         private string message;
+
 
         public string Message
         {
@@ -47,8 +48,9 @@ namespace PR32ObserverPattern2
 
         public void OnMessageChanged()
         {
-            MessageChanged();
+            MessageChanged(this, null);
         }
 
+        public event INotifyMessageChanged.EventHandler MessageChanged;
     }
 }
