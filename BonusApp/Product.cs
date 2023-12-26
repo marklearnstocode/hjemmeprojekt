@@ -15,14 +15,9 @@ namespace BonusApp
 			get { return name; }
 			set { name = value; }
 		}
-		private double value;
-
-		public double Value
-		{
-			get { return value; }
-			set { this.value = value; }
-		}
+        public double Value { get; set; }
+    }
 
 
-	}
+	
 }

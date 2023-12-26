@@ -71,7 +71,7 @@ namespace Disaheim
             return _valuables.Count;
         }
 
-        void IPersistable.Save()
+        public void Save()
         {
             StreamWriter SW = new StreamWriter("ValuableRepository.txt");
             IValuable valuable = null;

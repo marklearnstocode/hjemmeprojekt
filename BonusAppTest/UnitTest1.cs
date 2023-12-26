@@ -1,4 +1,5 @@
 using BonusApp;
+using System.ComponentModel;
 namespace BonusAppTest
 {
     [TestClass]
@@ -48,6 +49,22 @@ namespace BonusAppTest
 
             order.Bonus = Bonuses.FlatTwoIfAmountMoreThanFive;
             Assert.AreEqual(43.0, order.GetTotalPrice());
+        }
+        [TestMethod]
+
+        public void GetBonusAnonymous_Test()
+
+        {
+
+            order.Bonus = delegate (double amount) { double result = amount;
+                return result; }; // <- Change to anonymous method
+
+            Assert.AreEqual(4.5, order.GetBonus());
+
+            order.Bonus = Bonuses.FlatTwoIfAmountMoreThanFive; // <- Change to anonymous method
+
+            Assert.AreEqual(2.0, order.GetBonus());
+
         }
     }
 
