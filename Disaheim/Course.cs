@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,6 +55,16 @@ namespace Disaheim
                 DurationInHour++;
             }
 			return courseHourValue * DurationInHour;
+        }
+		
+		public string GetId()
+		{
+			return name;
+		}
+
+        public string InfoString()
+        {
+            return nameof(Course) + ";" + Name + ";" + DurationInMinutes + ";" + GetValue();
         }
     }
 }

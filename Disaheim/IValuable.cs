@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Disaheim;
 
-namespace Disaheim
+public interface IValuable
 {
-    public interface IValuable
-    {
+    public double GetValue();
 
+    // GetId is not specified in the design documentation/assignment
+    public string GetId();
 
-        public double GetValue();
-    }
+    public string InfoString();
+
 }

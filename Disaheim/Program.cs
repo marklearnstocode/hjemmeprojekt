@@ -6,7 +6,7 @@
         {
             Amulet pp = new Amulet("Navn", Level.high, "Design");
 
-            Console.WriteLine(pp.ToString());
+            Console.WriteLine(pp.InfoString());
 
             Console.ReadKey();
         }

@@ -44,5 +44,10 @@ namespace Disaheim
         {
             return price;
         }
+
+        public override string InfoString()
+        {
+			return nameof(Book) + ";" + ItemID + ";" + Title + ";" + price; 
+        }
     }
 }

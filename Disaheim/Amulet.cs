@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,6 +80,11 @@ namespace Disaheim
                 default:
                     return 0;
             }
+        }
+
+        public override string InfoString()
+        {
+            return nameof(Amulet) + ";" + ItemID + ";" + quality.ToString() + ";" + design;
         }
     }
 }

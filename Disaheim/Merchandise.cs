@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public abstract class Merchandise : IValuable
-    {
+	public abstract class Merchandise : IValuable
+	{
 		private string itemID;
 
 		public string ItemID
@@ -18,10 +18,16 @@ namespace Disaheim
 
 		public abstract double GetValue();
 
-        public override string ToString()
+		public override string ToString()
 		{
 			return $"ItemId: {ItemID}";
 		}
+		public string GetId()
+		{
+			return itemID;
+		}
+
+		public abstract string InfoString();
 
 	}
 }
