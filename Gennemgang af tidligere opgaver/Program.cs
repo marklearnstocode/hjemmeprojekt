@@ -90,7 +90,39 @@ namespace Gennemgang_af_tidligere_opgaver
             //Console.ReadKey();
             #endregion
             #region PR_02CSharpData
+            //Beregnen af areal fra en rektangel
+            //Console.WriteLine("Beregn areal for et rektangel");
+            //Console.WriteLine("Indtast højden på rektanglet i cm: ");
+            //int højde = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Indtast bredden på rektanglet i cm: ");
+            //int bredde = int.Parse(Console.ReadLine());
 
+            //Console.WriteLine("Rektanglets areal er: " + højde * bredde + " cm.");
+            //Console.ReadLine();
+
+            #region Øvelse 3.2: Hældning af linjestykke
+            //Console.WriteLine("Hældning af linjestykke-beregner");
+            //Console.WriteLine("Skriv startpunktets x_1 koordinat.");
+            //double x1 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Skriv startpunktets y_1 koordinat.");
+            //double y1 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Skriv slutpunktets x_2 koordinat.");
+            //double x2 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Skriv slutpunktets y_2 koordinat.");
+            //double y2 = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Hældningen af linjestykket er: " + (y2 -  y1)/(x2 - x1));
+            //Console.ReadKey();
+            #endregion
+            #region Øvelse 4: manipulation af tekststrenge
+            string testStreng = "Her er en længere tekststreng, som jeg vil bruge til mit eksempel";
+            string længdeAfTekststreng = testStreng.Substring(0, 7);
+            string testStreng1 = "kort";
+            int længde  = testStreng1.Length;
+            Console.WriteLine(længdeAfTekststreng);
+            Console.WriteLine(længde);
+
+            #endregion
 
             #endregion
         }
