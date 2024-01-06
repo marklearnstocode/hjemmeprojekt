@@ -89,7 +89,7 @@ namespace Gennemgang_af_tidligere_opgaver
             //Console.WriteLine("Punkt {0} er valgt: {1}", choice, message);
             //Console.ReadKey();
             #endregion
-            #region PR_02CSharpData
+            #region PR_03CSharpData
             //Beregnen af areal fra en rektangel
             //Console.WriteLine("Beregn areal for et rektangel");
             //Console.WriteLine("Indtast højden på rektanglet i cm: ");
@@ -115,14 +115,29 @@ namespace Gennemgang_af_tidligere_opgaver
             //Console.ReadKey();
             #endregion
             #region Øvelse 4: manipulation af tekststrenge
-            string testStreng = "Her er en længere tekststreng, som jeg vil bruge til mit eksempel";
-            string længdeAfTekststreng = testStreng.Substring(0, 7);
-            string testStreng1 = "kort";
-            int længde  = testStreng1.Length;
-            Console.WriteLine(længdeAfTekststreng);
-            Console.WriteLine(længde);
+            //string testStreng = "Her er en længere tekststreng, som jeg vil bruge til mit eksempel";
+            //string længdeAfTekststreng = testStreng.Substring(0, 7);
+            //string testStreng1 = "kort";
+            //int længde  = testStreng1.IndexOf("r");
+            //Console.WriteLine(længdeAfTekststreng);
+            //Console.WriteLine(længde);
 
             #endregion
+
+            #endregion
+            #region PR_04Loops
+            //string navn = "Markus";
+            //char ch = navn[1];
+            //char ch2 = navn[3];
+            //char ch3 = navn[5];
+            //Console.WriteLine(ch + " " + ch2 + " " + ch3);
+            //Console.ReadKey();
+
+            string name = "Markus";
+            while (name < 5)
+            {
+                Console.WriteLine(name[0] : {0}, name );
+            }
 
             #endregion
         }
