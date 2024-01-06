@@ -1,4 +1,6 @@
-﻿namespace Gennemgang_af_tidligere_opgaver
+﻿using System.Xml.Serialization;
+
+namespace Gennemgang_af_tidligere_opgaver
 {
     internal class Program
     {
@@ -44,9 +46,53 @@
 
 
             //Console.ReadKey();
+            //Console.WriteLine("Min fantastiske menu:");
+            //Console.WriteLine("");
+            //Console.WriteLine("1. Gør dit");
+            //Console.WriteLine("2. Gør dat");
+            //Console.WriteLine("3. Gør noget helt andet");
+            //Console.WriteLine("4. Bliv datamatiker");
+            //Console.WriteLine("");
+            //Console.WriteLine("Tryk menupunkt 1,2, 3 eller 4 for at vælge");
+            //string message = "";
+            //string choice = "";
+            //int Menupunkt = int.Parse(Console.ReadLine());
+            //#region switch case løsning
+            ////switch (Menupunkt)
+            ////{
+            ////    case 1:
+            ////        Console.WriteLine("Punkt 1 er valgt: Gør dit");
+            ////        break;
+            ////    case 2:
+            ////        Console.WriteLine("Punkt 2 er valgt: Gør dat");
+            ////        break;
+            ////    case 3:
+            ////        Console.WriteLine("Punkt 3 er valgt: Gør noget helt andet");
+            ////        break;
+            ////    case 4:
+            ////        Console.WriteLine("Punkt 4 er valgt: Du blev datamatiker!");
+            ////        break;
+            ////        default: Console.WriteLine("Du skal indtaste enten 1,2 3 eller 4");
+            ////        break;
+            //// }
+            //#endregion
+            //while (Menupunkt < 1 || Menupunkt > 4)
+            //{
+            //    Console.WriteLine("Indtast en gyldig valgmulighed");
+            //    Menupunkt = int.Parse(Console.ReadLine());
+
+            //}
+            //if (Menupunkt > 0 && Menupunkt < 2) { choice = "1"; message = ("Gør dit"); }
+            //else if (Menupunkt > 1 && Menupunkt < 3) { choice = "2"; message = ("Gør dat"); }
+            //else if (Menupunkt > 2 && Menupunkt < 4) { choice = "3"; message = ("Gør noget helt andet"); }
+            //else if (Menupunkt > 3 && Menupunkt < 5) { choice = "4"; message = ("Du blev datamatiker!"); }
+            //Console.WriteLine("Punkt {0} er valgt: {1}", choice, message);
+            //Console.ReadKey();
             #endregion
+            #region PR_02CSharpData
 
 
+            #endregion
         }
     }
 }
