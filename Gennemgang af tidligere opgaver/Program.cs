@@ -133,12 +133,30 @@ namespace Gennemgang_af_tidligere_opgaver
             //Console.WriteLine(ch + " " + ch2 + " " + ch3);
             //Console.ReadKey();
 
-            string name = "Markus";
-            while (name < 5)
-            {
-                Console.WriteLine(name[0] : {0}, name );
-            }
+            //string name = "Markus";
+            //int i = 0;
+            //while (i < 6)
+            //{
+            //    Console.WriteLine("{0} : '{1}'", i, name[i]);
 
+            //    i++;
+            //}
+            //do
+            //{
+            //    Console.WriteLine("{0} : '{1}'", i, name[i]);
+            //    i++;
+            //} while (i <6);
+
+            #region Øvelse 2.7: Heltalsdivision
+            
+            int a = 3;
+            int b = 2;
+            double x = a / b;
+            double y = (a % b);
+            
+
+            Console.WriteLine(a % b );
+            #endregion
             #endregion
         }
     }
