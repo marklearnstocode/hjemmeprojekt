@@ -149,13 +149,13 @@ namespace Gennemgang_af_tidligere_opgaver
 
             #region Øvelse 2.7: Heltalsdivision
             
-            int a = 3;
-            int b = 2;
+            double a = 3;
+            double b = 2;
             double x = a / b;
-            double y = (a % b);
+            double y = a % b;
             
 
-            Console.WriteLine(a % b );
+            Console.WriteLine(y );
             #endregion
             #endregion
         }
