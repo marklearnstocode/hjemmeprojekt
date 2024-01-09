@@ -145,18 +145,24 @@ namespace Gennemgang_af_tidligere_opgaver
             //{
             //    Console.WriteLine("{0} : '{1}'", i, name[i]);
             //    i++;
-            //} while (i <6);
+            //} while (i < 6);
 
             #region Øvelse 2.7: Heltalsdivision
-            
-            double a = 3;
-            double b = 2;
-            double x = a / b;
-            double y = a % b;
-            
 
-            Console.WriteLine(y );
+            //double a = 3;
+            //double b = 2;
+            //double x = a / b;
+            //double y = a % b;
+
+
+            //Console.WriteLine(y );
             #endregion
+
+            string helloWorld = "Hello, world!";
+            foreach (char c in helloWorld)
+            {
+                Console.WriteLine(c + ": " + (int)c);
+            }
             #endregion
         }
     }
