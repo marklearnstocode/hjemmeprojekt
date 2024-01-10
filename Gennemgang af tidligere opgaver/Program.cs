@@ -185,23 +185,23 @@ namespace Gennemgang_af_tidligere_opgaver
             #endregion
 
             #region Øvelse 2.11: tesktstrenge med cifre og operatorer
-
-            string tekststreng = "h3j m+d/ d3-g";
-            int i = 0;
-            while (i < tekststreng.Length)
-            {
-                char ch = tekststreng[i];
-                if (char.IsDigit(ch))
-                {
-                    Console.WriteLine($"{i} : {ch}");
-                }
-                else if(char.(ch))
-                {
-                    Console.WriteLine($"{i} : {ch}");
-                }
-                else { Console.WriteLine($"{i} : {ch} (ukendt)");}
-                i++;
-            }
+            //Ikke helt færdig
+            //string tekststreng = "h3j m+d/ d3-g";
+            //int i = 0;
+            //while (i < tekststreng.Length)
+            //{
+            //    char ch = tekststreng[i];
+            //    if (ch <= 0 && ch <= 9)
+            //    {
+            //        Console.WriteLine($"{i} : {ch}");
+            //    }
+            //    else if(ch.ToString(-  +))
+            //    {
+            //        Console.WriteLine($"{i} : {ch}");
+            //    }
+            //    else { Console.WriteLine($"{i} : {ch} (ukendt)");}
+            //    i++;
+            //}
             #endregion
             #endregion
         }
