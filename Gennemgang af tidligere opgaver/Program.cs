@@ -133,9 +133,9 @@ namespace Gennemgang_af_tidligere_opgaver
             //Console.WriteLine(ch + " " + ch2 + " " + ch3);
             //Console.ReadKey();
 
-            //string name = "Markus";
+            //string name = "Hvad er den bedste taktik til ikke at dumpe?";
             //int i = 0;
-            //while (i < 6)
+            //while (i < name.Length)
             //{
             //    Console.WriteLine("{0} : '{1}'", i, name[i]);
 
@@ -158,11 +158,51 @@ namespace Gennemgang_af_tidligere_opgaver
             //Console.WriteLine(y );
             #endregion
 
-            string helloWorld = "Hello, world!";
-            foreach (char c in helloWorld)
+            //string helloWorld = "Hello, world!";
+            //foreach (char c in helloWorld)
+            //{
+            //    Console.WriteLine(c + ": " + (int)c);
+            //}
+            #region Øvelse 2.9: Udskriv hver anden karakter i en tekstreng
+            //string name = "Hvad er den bedste taktik til ikke at dumpe?";
+
+            //for (int i = 1; i < name.Length; i+= 2)
+            //{
+            //    Console.WriteLine("{0} : '{1}'", i, name[i]);
+            //}
+
+            #endregion
+            #region Øvelse 2.10: Tekststrenge med cifre
+            //string tekststreng = "h3j m3d d1g";
+            //for (int i = 0; i < tekststreng.Length; i++)
+            //{
+            //    char ch = tekststreng[i];
+            //    if (ch >= '0' && ch <= '9')
+            //    {
+            //        Console.WriteLine($"<{i}>: '{ch}'");
+            //    }
+            //}
+            #endregion
+
+            #region Øvelse 2.11: tesktstrenge med cifre og operatorer
+
+            string tekststreng = "h3j m+d/ d3-g";
+            int i = 0;
+            while (i < tekststreng.Length)
             {
-                Console.WriteLine(c + ": " + (int)c);
+                char ch = tekststreng[i];
+                if (char.IsDigit(ch))
+                {
+                    Console.WriteLine($"{i} : {ch}");
+                }
+                else if(char.(ch))
+                {
+                    Console.WriteLine($"{i} : {ch}");
+                }
+                else { Console.WriteLine($"{i} : {ch} (ukendt)");}
+                i++;
             }
+            #endregion
             #endregion
         }
     }
