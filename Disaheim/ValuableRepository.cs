@@ -31,7 +31,7 @@ public class ValuableRepository : IPersistable
 
     public void Save()
     {
-        Save("ValuableRepository");
+        Save("ValuableRepository.txt");
     }
 
     public void Save(string fileName)
