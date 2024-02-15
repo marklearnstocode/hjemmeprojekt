@@ -8,13 +8,13 @@ namespace Rheinmetall
 {
     public class Tank: Goods
     {
-		private Quality condition;
+		//private Quality condition;
 
-		public Quality Condition
-		{
-			get { return condition; }
-			set { condition = value; }
-		}
+		//public Quality Condition
+		//{
+		//	get { return condition; }
+		//	set { condition = value; }
+		//}
 		private int productionYear;
 
 		public int Productionyear
@@ -27,7 +27,7 @@ namespace Rheinmetall
 		{
 			base.Manufactor = manufactor;
 			base.NameOfGoods = nameOfGoods;
-			this.condition = condition;
+			base.Condition = condition;
 			this.productionYear = productionYear;
 		}
 		public Tank(Quality condition, int productionYear): this(null, null, condition, productionYear)
@@ -36,9 +36,9 @@ namespace Rheinmetall
 		}
 
 
-		public double GetValue()
+		public override double GetValue()
 		{
-			switch (condition)
+			switch (Condition)
 			{
 				case Quality.low:
 					return (double)Quality.low;

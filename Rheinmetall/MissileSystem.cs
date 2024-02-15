@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Rheinmetall
 {
-    public class MissileSystem: Goods
+    public class MissileSystem : Goods
     {
+
+        public override double GetValue()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

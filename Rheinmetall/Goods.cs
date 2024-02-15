@@ -6,23 +6,30 @@ using System.Threading.Tasks;
 
 namespace Rheinmetall
 {
-    public class Goods
+    public abstract class Goods
     {
-		private string nameOfGoods;
+        private Quality condition;
+        private string nameOfGoods;
+		private double price;
+		private string manufactor;
+
+        public Quality Condition
+        {
+            get { return condition; }
+            set { condition = value; }
+        }
 
 		public string NameOfGoods
 		{
 			get { return nameOfGoods; }
 			set { nameOfGoods = value; }
 		}
-		private double price;
 
 		public double Price
 		{
 			get { return price; }
 			set { price = value; }
 		}
-		private string manufactor;
 
 		public string Manufactor
 		{
@@ -30,6 +37,6 @@ namespace Rheinmetall
 			set { manufactor = value; }
 		}
 
-
+		public abstract double GetValue();
 	}
 }
