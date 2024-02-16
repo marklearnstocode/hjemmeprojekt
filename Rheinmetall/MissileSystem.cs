@@ -11,7 +11,21 @@ namespace Rheinmetall
 
         public override double GetValue()
         {
-            throw new NotImplementedException();
+            switch (Condition)
+            {
+                case Quality.low:
+                    return (double)Quality.low + Manufactor;
+                    break;
+                case Quality.medium:
+                    return (double)Quality.medium + Manufactor;
+                    break;
+                case Quality.high:
+                    return (double)Quality.high + Manufactor;
+                    break;
+                default:
+                    return 0;
+                    break;
+            }
         }
     }
 }

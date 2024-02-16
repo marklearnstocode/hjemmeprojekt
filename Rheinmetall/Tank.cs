@@ -23,14 +23,14 @@ namespace Rheinmetall
 			set { productionYear = value; }
 		}
 		
-		public Tank(string manufactor, string nameOfGoods, Quality condition, int productionYear)
+		public Tank(double manufactor, string nameOfGoods, Quality condition, int productionYear)
 		{
 			base.Manufactor = manufactor;
 			base.NameOfGoods = nameOfGoods;
 			base.Condition = condition;
 			this.productionYear = productionYear;
 		}
-		public Tank(Quality condition, int productionYear): this(null, null, condition, productionYear)
+		public Tank(Quality condition, int productionYear): this(0, null, condition, productionYear)
 		{
 
 		}
