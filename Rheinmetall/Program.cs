@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Tank Tiger = new Tank(Quality.medium, 1990);
+            Console.WriteLine(Tiger.ToString());
         }
     }
 }

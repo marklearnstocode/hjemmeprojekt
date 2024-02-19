@@ -53,6 +53,10 @@ namespace Rheinmetall
 					return 0;
 			}
 		}
+		public string ToString()
+		{
+			return GetValue() + " Euro";
+		}
 
 
 
